@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Choise | Quiz Started</title>
+    <link rel="stylesheet" href="../css/questions.css">
+</head>
+<body>
+    <div id="parent-div">
+        <h1 id="question-title"></h1>
+        <div id="possibles"> 
+        </div>
+        <div class="footer-btn">    
+        </div>
+    </div>
+    <div class="loader-container"><span class="loader"></span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../javascript/jquery.js"></script>
+    <script type="module" src="../javascript/apiFetch.js"></script>
+    <script>
+        let contentLoad = document.querySelector(".loader-container")
+        setTimeout(() => {
+            document.getElementById("question-title").innerHTML !== "" ? contentLoad.style.visibility = "hidden": contentLoad.style.visibility = "visible"
+        }, 1500);
+    </script>
+</body>
+</html>
